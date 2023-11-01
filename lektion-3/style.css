@@ -1,0 +1,34 @@
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div, p {
+    /* gäller body och p*/
+    font-size: smaller;
+    font-family: 'Outfit', sans-serif;
+}
+.viktig {
+    color: red;
+}
+.understryk {
+    text-decoration: underline;
+}
+#sista-stycket {
+    color: green;
+}
+#sista-stycket .viktig {
+    /* mellanslag: alla class="viktig" inom sista-stycket */
+    color: blueviolet;
+}
+#sista-stycket>.viktig {
+    /* .viktig som finns direkt under #sista-stycket */
+    color: deeppink;
+}
+p.viktig {
+    /* alla p som har klassen viktig */
+    font-style: italic;
+}
+h2:hover {
+    /* :hover är en pseudoselektor */
+    color:aquamarine;
+}

@@ -1,52 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+    
+    <!-- denna fil kommer efter style.css och overridar -->
+    <link href="custom-style.css" rel="stylesheet">
+
     <style>
         body {
             background-color: lightblue;
         }
-        div, p {
-            /* gäller body och p*/
-            font-size: smaller;
-        }
-        .viktig {
-            color: red;
-        }
-        .understryk {
-            text-decoration: underline;
-        }
-        #sista-stycket {
-            color: green;
-        }
-        #sista-stycket .viktig {
-            /* mellanslag: alla class="viktig" inom sista-stycket */
-            color: blueviolet;
-        }
-        #sista-stycket>.viktig {
-            /* .viktig som finns direkt under #sista-stycket */
-            color: deeppink;
-        }
-        p.viktig {
-            /* alla p som har klassen viktig */
-            font-style: italic;
-        }
-        h2:hover {
-            /* :hover är en pseudoselektor */
-            color:aquamarine;
-        }
     </style>
 </head>
+
 <body>
-    <h2>Lektion 3</h2>
-    
+    <h2 style="color: blue;">Lektion 3</h2>
+
     <p class="understryk">Lorem ipsum dolor sit amet</p>
 
-    Utanför div och p
+    <span class="understryk">Utanför</span> div och p
 
-    <p class="viktig">Blanditiis quis optio repudiandae 
+    <p class="viktig">Blanditiis quis optio repudiandae
         suscipit aperiam asperiores</p>
 
     <p>molestias <b class="viktig understryk">accusantium dolorum</b>
@@ -54,14 +37,37 @@
 
     <!-- id ska vara unik, endast en "sista-stycket" får finnas -->
     <div id="sista-stycket">
-        Mollitia totam excepturi alias atque 
+        Mollitia totam excepturi alias atque
         <b class="viktig">error</b> explicabo!
         <span>
             Text i en <b class="viktig">inre</b> span
         </span>
-    </div>  
+    </div>
+    <hr>
+    <table>
+        <tr>
+            <th>Hunddjur</th>
+            <th>Kattdjur</th>
+        </tr>
+        <tr>
+            <td>hund</td> 
+            <td>katt</td>
+        </tr>
+        <tr>
+            <td>varg</td>
+            <td>tiger</td>
+        </tr>
 
-    
+    </table>
+
+    <ul><!-- unordered list-->
+        <li>Ett</li> <!-- list item -->
+        <li>Två</li>
+        <li>Tre</li>
+    </ul>
+
+
 
 </body>
+
 </html>
