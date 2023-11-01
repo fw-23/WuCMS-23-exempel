@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        div, p {
+            /* gäller body och p*/
+            font-size: smaller;
+        }
+        .viktig {
+            color: red;
+        }
+        .understryk {
+            text-decoration: underline;
+        }
+        #sista-stycket {
+            color: green;
+        }
+        #sista-stycket .viktig {
+            /* mellanslag: alla class="viktig" inom sista-stycket */
+            color: blueviolet;
+        }
+        #sista-stycket>.viktig {
+            /* .viktig som finns direkt under #sista-stycket */
+            color: deeppink;
+        }
+        p.viktig {
+            /* alla p som har klassen viktig */
+            font-style: italic;
+        }
+        h2:hover {
+            /* :hover är en pseudoselektor */
+            color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lektion 3</h2>
+    
+    <p class="understryk">Lorem ipsum dolor sit amet</p>
+
+    Utanför div och p
+
+    <p class="viktig">Blanditiis quis optio repudiandae 
+        suscipit aperiam asperiores</p>
+
+    <p>molestias <b class="viktig understryk">accusantium dolorum</b>
+        veniam excepturi itaque</p>
+
+    <!-- id ska vara unik, endast en "sista-stycket" får finnas -->
+    <div id="sista-stycket">
+        Mollitia totam excepturi alias atque 
+        <b class="viktig">error</b> explicabo!
+        <span>
+            Text i en <b class="viktig">inre</b> span
+        </span>
+    </div>  
+
+    
+
+</body>
+</html>
