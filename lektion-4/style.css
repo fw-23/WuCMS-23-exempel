@@ -1,5 +1,27 @@
-p {
-    background-color: white;
+p { background-color: white; }
+
+.container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; (default, behöver inte sägas explicit) */
+}
+
+.container > div {
+    width: 150px;
+    border: 1px solid rgb(44, 138, 7);
+    border-radius: 5px;
+    padding: 5px;
+    /* margin: 0 auto; */
+
+}
+
+.hero {
+    border: 1px solid black;
+    background-color: greenyellow;
+    width: 100%;
+    height: 300px;
 }
 
 .wide-only, .medium-only, .small-only {
@@ -7,9 +29,16 @@ p {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.wide-only { background-color: aquamarine; }
-.medium-only { background-color: rgb(255, 252, 76); }
-.small-only { background-color: rgb(159, 162, 255); }
+
+.wide-only { 
+    background-color: aquamarine; 
+}
+.medium-only { 
+    background-color: rgb(255, 252, 76); 
+}
+.small-only { 
+    background-color: rgb(159, 162, 255); 
+}
 
 
 @media (min-width: 1000px) {
@@ -18,14 +47,16 @@ p {
     }
 }
 
-@media (max-width: 999px) and (min-width: 600px) {
+@media (max-width: 999px) and (min-width: 500px) {
     /* medium */
-    p {
-        background-color: aqua;
-    }
+    .hero { height: 100px;}
     .medium-only { display: block; }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 500px) {
+    .hero {display: none;}
     .small-only { display: block; }
+    .container {
+        flex-direction: column;
+    }
 }
