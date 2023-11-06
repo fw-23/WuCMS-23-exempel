@@ -1,0 +1,31 @@
+p {
+    background-color: white;
+}
+
+.wide-only, .medium-only, .small-only {
+    display: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wide-only { background-color: aquamarine; }
+.medium-only { background-color: rgb(255, 252, 76); }
+.small-only { background-color: rgb(159, 162, 255); }
+
+
+@media (min-width: 1000px) {
+    .wide-only {
+        display: block;
+    }
+}
+
+@media (max-width: 999px) and (min-width: 600px) {
+    /* medium */
+    p {
+        background-color: aqua;
+    }
+    .medium-only { display: block; }
+}
+
+@media (max-width: 599px) {
+    .small-only { display: block; }
+}
