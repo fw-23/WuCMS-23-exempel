@@ -1,10 +1,23 @@
 p { background-color: white; }
 
+i[class^="fa-"] {
+    font-size: 30px;
+    color: cornflowerblue;
+}
+
+
+img {
+    /* 100% för att få bilden
+    att hållas innanför div:en*/
+    max-height: 100%; 
+    max-width: 100%;
+}
+
 .container {
     display: flex;
     gap: 5px;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; (centrerar vertikalt) */
     /* flex-direction: row; (default, behöver inte sägas explicit) */
 }
 
@@ -15,6 +28,14 @@ p { background-color: white; }
     padding: 5px;
     /* margin: 0 auto; */
 
+}
+
+.inner-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.inner-flex-container > div {
+    width: 50%;
 }
 
 .hero {
