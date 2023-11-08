@@ -1,0 +1,18 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 5px;
+}
+
+.thumbnails img {
+    height: 150px;
+}
+
+iframe {
+    width: 600px;
+    min-height: 300px;
+    border: 0;
+}
