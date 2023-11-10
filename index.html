@@ -4,14 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WuCMS-23</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h3>Webbutveckling och CMS 2023</h3>
     
-    <ol>
-        <li><a href="./lektion-1/">lektion 1</a></li>
-        <li><a href="./lektion-2/">lektion 2</a></li>
+    <!-- onclick är en s.k. lyssnare som "lyssnar" efter ett klick-->
+    <div id="burger-btn" onclick="burgerClick()">☰</div>
+    <nav>
+        <div><a href="./lektion-1/">lektion 1</a></div>
+        <div><a href="./lektion-2/">lektion 2</a></div>
+        <div><a href="./lektion-3/">lektion 3</a></div>
+        <div><a href="./lektion-4/">lektion 4</a></div>
+        <div><a href="./lektion-5/">lektion 5</a></div>
+        <div><a href="./lektion-6/">lektion 6</a></div>
 
-    </ol>
+    </nav>
+
+    <script>
+        //console.log("javascript funkar!")
+
+        function burgerClick() {
+            console.log("Du klickade på burgaren!")
+
+            // vi sparar menyn i en variabel för läslighetens skull
+            let menu = document.querySelector("nav")
+
+            // Kolla nav-menyns css "display": 
+            // if "none" then "flex" else "none" 
+            if (menu.style.display != "flex") {
+                menu.style.display = "flex"
+            } else {
+                menu.style.display = "none"
+            }
+
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+nav {
+    /* flex-container */
+    display: flex;
+    flex-direction: row;
+}
+
+nav > div {
+    /* flex-element */
+    margin-right: 5px;
+    margin-bottom: 2px;
+    padding: 5px;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+#burger-btn {
+    display: none;
+
+    user-select: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    nav {
+        flex-direction: column;
+        display: none;
+    }
+    #burger-btn {
+        display: block;
+    }
+}
+@media (min-width: 500px) {
+    nav {
+        /* flex-container */
+        display: flex !important;
+        /* !important i css "vinner" allt annat 
+         löser problemet med att <nav> inte blir display: flex
+         igen efter att vi ändrat via JS.
+        */
+    }
+}
