@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lektion 5</title>
+    <style>
+        .thumbnails {
+            display: flex;
+            gap: 5px;
+        }
+
+        .thumbnails img {
+            height: 150px;
+        }
+
+        #lightbox {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(7, 7, 7, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #lightbox img {
+            max-height: 80%;
+            max-width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lightbox</h2>
+
+    <div class="thumbnails">
+        <div>
+            <!-- funktionen openLightbox anropas vid klick med stora bildens filnamn som argument -->
+            <img src="assets/img/katt-1-thumb.jpg" onclick="openLightbox('katt-1.jpg')">
+        </div>
+        <div>
+            <img src="assets/img/katt-2-thumb.jpg" onclick="openLightbox('katt-2.jpg')">
+        </div>
+        <div>
+            <img src="assets/img/katt-3-thumb.jpg" onclick="openLightbox('katt-3.jpg')">
+        </div>
+    </div>
+
+    <!-- container-div för stora bilden, tom <img> som sedan får bilden som src 
+        funktionen closeLightbox() anropas vid klick -->
+    <div id="lightbox" onclick="closeLightbox()"><img></div>
+
+    <script>
+    // funktionen tar emot bildens filnamn som argument och lagrar i variabeln image 
+    function openLightbox(image) {
+        // gör lightbox-containern synlig genom att ändra CSS till display: flex;
+        document.querySelector('#lightbox').style.display = 'flex'
+        // sätt in stora bildens filnamn som src in lightboxens tomma <img>-tag
+        document.querySelector('#lightbox > img').src = "assets/img/" + image;
+    }
+    function closeLightbox() {
+        // dölj lightboxen igen genom att ändra CSS til display: none;
+        document.querySelector('#lightbox').style.display = 'none'
+    }
+    </script>
+    
+</body>
+</html>
