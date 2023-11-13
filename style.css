@@ -12,6 +12,14 @@ nav > div {
     border: 1px solid salmon;
     border-radius: 5px;
     white-space: nowrap;
+    background-color: rgb(46, 0, 130);
+}
+nav a {
+    color: white;
+    text-decoration: none; 
+}
+nav a:hover {
+    color: yellow;
 }
 
 #burger-btn {
