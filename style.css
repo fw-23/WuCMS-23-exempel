@@ -31,7 +31,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     nav {
         flex-direction: column;
         display: none;
@@ -40,7 +40,7 @@ nav a:hover {
         display: block;
     }
 }
-@media (min-width: 500px) {
+@media (min-width: 550px) {
     nav {
         /* flex-container */
         display: flex !important;
