@@ -12,7 +12,10 @@
 </head>
 <body>
 
-    <?php include "menu.php"; ?>
+    <?php 
+        include_once "menu.php"; 
+        // include_once eller require_once ==> filen kan inte av misstag inkluderas flera gånger
+    ?>
 
     <h2><?php echo $page_title; ?></h2>
 

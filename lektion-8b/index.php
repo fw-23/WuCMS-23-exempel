@@ -13,7 +13,7 @@
     </nav>
 
     <?php 
-        $page = $_GET["page"];
+        $page = $_GET["page"]; // URL-variabel alltså ...my-site/?page=home
 
         if (!$page) { 
             // ! betyder "not", "if not $page"
@@ -21,7 +21,8 @@
             $page = "home";
         }
 
-        include "./content/" . $page  . ".php"; 
+        //include "./content/" . $page  . ".php"; 
+        require "./content/" . $page  . ".php"; // require gör så att sidan "kraschar" om det blir ett fel
     ?>
     
     <p><a href="../lektion-8/">Tillbaka till Lektion 8</a></p>
