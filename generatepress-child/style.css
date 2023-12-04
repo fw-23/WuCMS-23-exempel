@@ -1,0 +1,61 @@
+/*
+Theme Name:   GeneratePress Child
+Theme URI:    http://example.com/twenty-fifteen-child/
+Description:  Twenty Fifteen Child Theme
+Author:       John Doe
+Author URI:   http://example.com
+Template:     generatepress
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  generatepress-child
+*/
+
+body {
+    background-color: #3c1518
+}
+
+a {
+    text-decoration: underline;
+    color: rgb(206, 232, 255);
+}
+
+.main-title a {
+    color: yellow;
+}
+
+.main-title a:hover {
+    color: lime;
+}
+
+.site-header, .main-navigation {
+    background: none;
+    
+}
+
+.main-navigation .main-nav ul li a {
+    color: white;
+    font-size: larger;
+}
+.main-navigation .gp-icon {
+    color: white;
+}
+
+.main-navigation .main-nav ul li[class*="current-menu-"] > a {
+    color: yellow;
+}
+.mobile-menu-control-wrapper, .main-navigation.toggled .sf-menu  {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.separate-containers .inside-article {
+    color: white;
+    background-color: #69140e;
+    width: 100%;
+}
+
+.site-footer .site-info {
+    background-color: #D58936;
+}
+  
